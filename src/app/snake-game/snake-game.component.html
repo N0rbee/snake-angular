@@ -1,0 +1,21 @@
+<app-game-score [score]="score"></app-game-score>
+<app-snake-board
+  [boardSize]="boardSize"
+  [snake]="snake"
+  [foods]="foods"
+></app-snake-board>
+<app-game-menu
+  (newGameEvent)="restart()"
+  (pauseEvent)="pauseTick($event)"
+  [paused]="paused"
+  [gameOver]="gameOver"
+></app-game-menu>
+<div class="controls">
+  <strong>Controls</strong><br />
+  Up: "{{ keyUp }}"<br />
+  Down: "{{ keyDown }}"<br />
+  Left: "{{ keyLeft }}"<br />
+  Right: "{{ keyRight }}"<br />
+  Pause / Continue: "{{ keyPause }}"<br />
+  New Game: "{{ keyRestart }}"<br />
+</div>

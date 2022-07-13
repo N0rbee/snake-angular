@@ -1,0 +1,21 @@
+.board {
+  --tile-size: 25px;
+  border: 1px solid black;
+  margin: 0 auto;
+  width: calc(var(--tile-size) * var(--board-size));
+  height: calc(var(--tile-size) * var(--board-size));
+  position: relative;
+}
+
+.tile {
+  width: var(--tile-size);
+  height: var(--tile-size);
+  position: absolute;
+  background-color: #000;
+  border: 1px solid #fff;
+  box-sizing: border-box;
+}
+
+.tile.food {
+  background-color: red;
+}

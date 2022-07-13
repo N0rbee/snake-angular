@@ -1,0 +1,6 @@
+<p class="game-menu">
+  <button *ngIf="!gameOver" (click)="pauseGame(!paused)">
+    {{ paused ? "Continue" : "Pause" }}
+  </button>
+  <button *ngIf="gameOver" (click)="startNewGame()">New Game</button>
+</p>

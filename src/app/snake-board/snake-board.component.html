@@ -1,0 +1,12 @@
+<div class="board" [style.--board-size]="boardSize">
+  <div
+    class="tile"
+    *ngFor="let tile of snake"
+    [ngStyle]="applyTilePositionStyle(tile)"
+  ></div>
+  <div
+    class="tile food"
+    *ngFor="let food of foods"
+    [ngStyle]="applyTilePositionStyle(food)"
+  ></div>
+</div>
